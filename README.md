@@ -2,7 +2,11 @@
 proyecto
 
 ## Descripcion
-EstudiaZen es una página web diseñada para ayudar a estudiantes a organizar su tiempo, reducir el estrés académico y mejorar su rendimiento escolar. La plataforma integra herramientas de planificación, recordatorios, técnicas de estudio y recursos de relajación en un solo sitio, de forma sencilla y accesible.
+La pagina permite a los usuarios visualizar mascotas disponibles para adopción a través de una interfaz dinámica, donde pueden filtrar los resultados por características como especie, edad, tamaño y sexo. Cada mascota cuenta con una ficha informativa detallada que muestra su información principal y fotografias.
+
+Además, la plataforma ofrece un formulario de solicitud de adopción que permite a los usuarios interesados registrar su información de manera sencilla y segura. Gracias al uso de un framework de frontend, la información se actualiza en tiempo real sin necesidad de recargar la página, mejorando significativamente la experiencia del usuario.
+
+El proyecto está orientado a refugios de rescate animal. AdoptaAmigos demuestra el uso de tecnologías modernas de desarrollo web, aplicando principios de reactividad, manejo de estado, diseño responsivo y accesibilidad, cumpliendo con los estándares de una aplicación web profesional y multiplataforma.
 
 ## Problemática
 
