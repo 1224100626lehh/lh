@@ -1,44 +1,73 @@
-# EstudiaZen
+# AdoptaAmigos
 proyecto
-<img width="500" height="500" alt="Gemini_Generated_Image_emftndemftndemft" src="https://github.com/user-attachments/assets/8c38888c-6009-40b1-a114-aa3f24781e8c" />
 
 ## Descripcion
 EstudiaZen es una página web diseñada para ayudar a estudiantes a organizar su tiempo, reducir el estrés académico y mejorar su rendimiento escolar. La plataforma integra herramientas de planificación, recordatorios, técnicas de estudio y recursos de relajación en un solo sitio, de forma sencilla y accesible.
 
 ## Problemática
 
-En la actualidad, muchos estudiantes enfrentan sobrecarga académica, acumulación de tareas, proyectos y exámenes, lo que provoca:
+Actualmente, muchos refugios y asociaciones de rescate animal difunden a las mascotas en adopción a través de redes sociales o publicaciones estáticas, lo que provoca:
 
-Mala organización del tiempo,
+Información desactualizada sobre las mascotas disponibles.
 
-Procrastinación,
+Dificultad para filtrar por tamaño, edad o tipo de mascota.
 
-Estrés y ansiedad,
+Procesos lentos para contactar al refugio.
 
-Bajo rendimiento académico,
-
-Falta de hábitos de estudio saludables,
-
-Además, no todos los estudiantes cuentan con orientación psicológica o herramientas digitales adecuadas para gestionar su tiempo y bienestar emocional.
+Baja tasa de adopción debido a la falta de una plataforma centralizada.
 
 ## Requerimientos funcionales
-### Planificador académico
-Calendario semanal y mensual
+RF1: El sistema debe visualizar una lista interactiva de mascotas disponibles para adopción.
 
-Registro de tareas, exámenes y proyectos
+RF2: El usuario debe poder filtrar mascotas por especie, edad, tamaño y sexo en tiempo real.
 
-Recordatorios automáticos
+RF3: El usuario debe visualizar la información detallada de una mascota seleccionada.
 
-### Gestión del tiempo
-Lista de tareas priorizadas
+RF4: El usuario debe poder registrar una solicitud de adopción mediante un formulario.
 
-Técnica Pomodoro
+RF5: El administrador debe poder editar el estado de adopción de una mascota (disponible / adoptada)
 
-Medidor de productividad diaria
+## Requerimientos No Funcionales (El “Cómo funciona”)
 
-### Técnicas de estudio
-Métodos de estudio explicados de forma sencilla
+| Categoría         | Especificación Técnica                                                                                             |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **Adaptabilidad** | Diseño **Responsive** utilizando Flexbox y CSS Grid para correcta visualización en móviles, tabletas y escritorio. |
+| **Rendimiento**   | Implementación de **Lazy Loading** para cargar componentes y rutas solo cuando el usuario las necesite.            |
+| **Persistencia**  | Uso de **LocalStorage** para guardar filtros aplicados y formularios parcialmente completados.                     |
+| **Accesibilidad** | Uso de etiquetas HTML semánticas, contraste adecuado de colores y atributos **ARIA** para lectores de pantalla.    |
 
-Videos y resúmenes
+## Tecnologías y Herramientas del Ecosistema
 
-Consejos para mejorar la concentración
+Framework Frontend: React
+
+Manejo de Estado Global: Context API
+
+Se utiliza para compartir el estado de las mascotas y solicitudes de adopción entre componentes.
+
+Consumo de Datos: Fetch API
+
+Los datos provienen de una API simulada o archivo JSON local.
+
+Estilizado: Tailwind CSS
+
+Permite crear interfaces modernas, limpias y responsivas de forma rápida.
+
+Despliegue: Netlify
+
+Ideal para aplicaciones SPA con React y despliegue continuo desde GitHub.
+
+## Diagrama de Flujo 
+
+A --> Usuario entra a la plataforma --> B Visualiza lista de mascotas
+
+B --> C aplica preferencias de el usuario
+
+C --> D Se actualiza la informacion de la pagina
+
+D --> E Selecciona una mascota
+
+E --> F Visualiza detalles
+
+F --> G Envía solicitud de adopción
+
+G --> H Formulario se guarda y confirma envío
