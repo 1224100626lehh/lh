@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #27F5A3;
+  --color-secondary: #E630F0;
+ 
+  /* Definimos variables de padding para usarlas luego */
+  --spacing-container-sm: 2rem;
+  --spacing-container-lg: 4rem;
+  --spacing-container-xl: 5rem;
+}
+
+
+/* Personalizamos el comportamiento del contenedor */
+@utility container {
+  margin-inline: auto; /* Esto equivale a center: true */
+  padding-inline: 2rem; /* Padding base */
+
+
+  @media (width >= 640px) {
+    padding-inline: var(--spacing-container-sm);
+  }
+
+
+  @media (width >= 1024px) {
+    padding-inline: var(--spacing-container-lg);
+  }
+
+
+  @media (width >= 1280px) {
+    padding-inline: var(--spacing-container-xl);
+  }
+} 
+
+  @keyframes pulse-soft {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+  }
+
+  @keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes nav-jump {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); } 
+}
+
+.hover-jump:hover {
+  display: inline-block; /* Necesario para que el transform funcione */
+  animation: nav-jump 0.4s ease-in-out;
+  color: var(--color-secondary) !important;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('./assets/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100% ;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  animation: slideUpFade 1s ease-out;
+}
+.btn-banner {
+  padding: 12px 32px;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.btn-primary-custom {
+  background-color:transparent;
+  border-color: var(--color-primary);
+  color: white;
+}
+.btn-primary-custom:hover {
+    background-color: var(--color-primary);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(39, 245, 163, 0.4);
+}
+
+/* Botón de Gatos usando tu color secondary (#E630F0) */
+.btn-secondary-custom {
+  background-color: transparent;
+  border-color: var(--color-secondary);
+  color: white;
+}
+
+.btn-secondary-custom:hover {
+  background-color: var(--color-secondary);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(39, 245, 163, 0.4);
+}
+
+/* Aplicar a los botones */
+.btn-animate-pulse {
+  animation: pulse-soft 2s infinite ease-in-out;
+}
+
+/* Retraso para el segundo botón para que no pulsen al mismo tiempo (opcional) */
+.delay-pulse {
+  animation-delay: 2s;
+}
+
